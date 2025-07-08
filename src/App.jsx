@@ -26,12 +26,46 @@ function App() {
     return setCartProducts([...cartProducts, newProduct]);
   };
 
+  const handleIncrementClick = (productId) => {
+    const updatedCart = cartProducts.map((product) => {
+      if (product.id === productId) {
+        return { ...product, quantity: product.quantity + 1 };
+      } else {
+        return product;
+      }
+    });
+    return setCartProducts(updatedCart);
+  };
+
+  const handleDecrementClick = (productId) => {
+    const updatedCart = cartProducts.map((product) => {
+      if (product.id === productId && product.quantity > 1) {
+        return { ...product, quantity: product.quantity - 1 };
+      } else {
+        return product;
+      }
+    });
+    return setCartProducts(updatedCart);
+  };
+
+  const handleRemoveClick = (productId) => {
+    const updatedCart = cartProducts.filter(
+      (product) => product.id !== productId
+    );
+    return setCartProducts(updatedCart);
+  };
+
   return (
     <div className="flex flex-col gap-4 text-white p-6">
-      <Header />
+      <Header cartProducts={cartProducts} />
       <div className="flex flex-col md:flex-row justify-between gap-4">
         <ProductsList handelAddProduct={handelAddProduct} />
-        <ShoppingCart cartProducts={cartProducts} />
+        <ShoppingCart
+          cartProducts={cartProducts}
+          handleIncrementClick={handleIncrementClick}
+          handleDecrementClick={handleDecrementClick}
+          handleRemoveClick={handleRemoveClick}
+        />
       </div>
     </div>
   );

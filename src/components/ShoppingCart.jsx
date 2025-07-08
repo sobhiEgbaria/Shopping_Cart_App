@@ -1,14 +1,28 @@
 import CartProduct from "./atoms/CartProduct";
-const ShoppingCart = ({ cartProducts }) => {
+const ShoppingCart = ({
+  cartProducts,
+  handleIncrementClick,
+  handleDecrementClick,
+  handleRemoveClick,
+}) => {
   const cartContent = cartProducts.map((product) => {
     return (
       <CartProduct
         name={product.name}
+        id={product.id}
         price={product.price}
         quantity={product.quantity}
+        handleIncrementClick={handleIncrementClick}
+        handleDecrementClick={handleDecrementClick}
+        handleRemoveClick={handleRemoveClick}
       />
     );
   });
+
+  const total = cartProducts.reduce(
+    (sum, product) => sum + product.price * product.quantity,
+    0
+  );
 
   return (
     <div className="w-full md:w-1/2 bg-gray-800 p-6 rounded-lg">
@@ -20,7 +34,7 @@ const ShoppingCart = ({ cartProducts }) => {
         <ul>{cartContent}</ul>
       )}
 
-      <h3 className="text-lg font-bold">Total: $125</h3>
+      <h3 className="text-lg font-bold">Total: ${total}</h3>
     </div>
   );
 };
