@@ -6,8 +6,24 @@ import { useState } from "react";
 function App() {
   const [cartProducts, setCartProducts] = useState([]);
 
-  const handelAddProduct = (product) => {
-    setCartProducts([...cartProducts, product]);
+  const handelAddProduct = (newProduct) => {
+    const existingProduct = cartProducts.find(
+      (product) => product.id === newProduct.id
+    );
+
+    if (existingProduct) {
+      const updatedCart = cartProducts.map((product) => {
+        if (product.id === newProduct.id) {
+          return { ...product, quantity: product.quantity + 1 };
+        } else {
+          return product;
+        }
+      });
+
+      return setCartProducts(updatedCart);
+    }
+
+    return setCartProducts([...cartProducts, newProduct]);
   };
 
   return (

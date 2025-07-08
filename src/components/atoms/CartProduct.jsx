@@ -1,9 +1,11 @@
-const CartProduct = ({ name, price }) => {
+const CartProduct = ({ name, price, quantity }) => {
   return (
     <li className="flex justify-between items-center mb-4">
       <div>
         <h3 className="text-lg font-medium">{name}</h3>
-        <p className="text-sm text-gray-400">${price} x 5</p>
+        <p className="text-sm text-gray-400">
+          ${price} x {quantity}
+        </p>
       </div>
 
       <div className="flex items-center gap-2 *:transition-colors">
