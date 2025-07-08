@@ -12,3 +12,4 @@ Features
 4.View total price of items in the cart
 5.View total number of items in the cart
 
+
