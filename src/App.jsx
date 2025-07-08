@@ -1,12 +1,12 @@
 import Header from "./components/Header";
-import Products from "./components/Products";
+import ProductsList from "./components/ProductsList";
 import ShoppingCart from "./components/ShoppingCart";
 function App() {
   return (
-    <div class="flex flex-col gap-4 text-white p-6">
+    <div className="flex flex-col gap-4 text-white p-6">
       <Header />
-      <div class="flex flex-col md:flex-row justify-between gap-4">
-        <Products />
+      <div className="flex flex-col md:flex-row justify-between gap-4">
+        <ProductsList />
         <ShoppingCart />
       </div>
     </div>

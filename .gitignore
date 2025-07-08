@@ -24,6 +24,6 @@ dist-ssr
 *.sw?
 
 atoms
-Products.jsx
+ProductsList.jsx
 ShoppingCart.jsx
  
