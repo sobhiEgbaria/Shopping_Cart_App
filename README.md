@@ -1,12 +1,14 @@
 # React + Vite
+simple shopping cart project built with React, TypeScript, and Tailwind CSS. 
+URL to Take a look : https://shoopingcartapp.netlify.app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Project-Screenshot](https://github.com/user-attachments/assets/adf59ea8-d352-4429-bf5b-a1572979f593)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features
+1.Add products to the cart
+2.Increase or decrease item quantity
+3.Remove items from the cart
+4.View total price of items in the cart
+5.View total number of items in the cart
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
