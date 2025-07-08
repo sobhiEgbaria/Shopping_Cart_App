@@ -1,0 +1,24 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Apple Watch",
+      "price": 900
+    },
+    {
+      "id": 2,
+      "name": "Samsung Watch",
+      "price": 700
+    },
+    {
+      "id": 3,
+      "name": "Google Watch",
+      "price": 650
+    },
+    {
+      "id": 4,
+      "name": "Xiaomi Watch",
+      "price": 550
+    }
+  ]
+}
